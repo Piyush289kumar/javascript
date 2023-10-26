@@ -11,5 +11,5 @@ if (count($result) > 0) {
         echo $row['post_id'] . " - " .  $row['title'] .  " - " . $row['author'] . "<br>";
     }
 } else {
-    echo "NO RECORD FOUND.....";
+    echo "NO RECORD FOUND...";
 }
