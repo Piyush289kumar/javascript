@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+
+    <style>
+      #btn {
+        height: 100px;
+        width: 100px;
+        margin: 15px;
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+      .grey{
+        background-color: gray;
+      }
+      .green{
+        background-color: greenyellow;
+      }
+      .orange{
+        background-color: orange;
+      }
+      .red{
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <div id="btn" class="grey"></div>
+      <div id="btn" class="green"></div>
+      <div id="btn" class="orange"></div>
+      <div id="btn" class="red"></div>
+    </div>
+
+
+    <script>
+        const body = document.querySelector("body");
+
+        const bar = document.querySelectorAll('#btn');
+
+        document.addEventListener('click', (el)=>{
+           
+
+           switch (el.target.className) {
+            case 'grey':
+                body.style.backgroundColor = el.target.className;                
+                break;
+                case 'green':
+                body.style.backgroundColor = el.target.className;                
+                break;
+                case 'orange':
+                body.style.backgroundColor = el.target.className;                
+                break;
+                case 'red':
+                body.style.backgroundColor = el.target.className;                
+                break;
+           
+            default:
+                break;
+           }
+        })
+
+
+
+        
+
+    </script>
+  </body>
+</html>
