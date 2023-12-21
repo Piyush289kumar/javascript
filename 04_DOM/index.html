@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+</head>
+
+<body style="background-color: #212121; color : #fff">
+
+
+    <script>
+
+
+        function createElement(myEl, myTx, myColo) {
+
+            const myElement = document.createElement(myEl);
+            const nodeText = document.createTextNode(myTx);
+            myElement.appendChild(nodeText)
+
+            myElement.style.backgroundColor = myColo;
+            myElement.style.padding = '50px'
+            myElement.style.margin = '10px';
+
+            document.body.appendChild(myElement)
+
+        }
+
+        const myElArray = ['h1', 'h2', 'h1'];
+        const myElTextArray = ['Jay', 'Shree', 'Ram'];
+        const myColorArray = ['orange', 'red', 'blue']
+
+        let arrayIdx = 0;
+
+
+
+
+        for (let idx = 0; idx < myElArray.length; idx++) {
+            console.log(createElement(myElArray[arrayIdx], myElTextArray[arrayIdx], myColorArray[arrayIdx]));
+
+            arrayIdx++;
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
