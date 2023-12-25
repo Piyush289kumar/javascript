@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess A Number</title>
 </head>
-<body style="background: #222; color: #fff;">
-    
-        <form style="margin: 10px;">
-            <label>Enter A Number</label>
-            <input type="text" id="inputNum">
-            <input type="submit" value="Submit" id="submitBtn">
-        </form>
 
-        <p>Previous Guesses : <span id="prg"></span></p>
-        <p>Remaining Chances : <span id="rmc"></span></p>
-        <p>Result : <span id="result"></span></p>
-    <script src="guessNumber.js"></script>
+
+
+<body style="background: #222; color: #fff;">
+
+        <div class="wrapper">
+            <h1>Number guessing game</h1>
+            <p>Try and Guess a random number between 1 and 100</p>
+            <p>You have 10 attempts to guess the right number</p>
+            <br>
+            <form class="form">
+                <label for="">Guess a Number</label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" id="subt" value="Submit Guess" class="guessSubmit">
+            </form>
+
+            <div class="resultParas">
+                <p>Previous Guesses: <span class="guesses"></span></p>
+                <p>Guesses Remaining: <span class="lastResult">10</span></p>
+                <p class="lowOrHi"></p>
+            </div>
+
+        </div>
+    
+        <script src="guessNumberOpt.js"></script>
 </body>
 </html>
