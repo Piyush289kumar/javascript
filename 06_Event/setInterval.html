@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event IsIntervel</title>
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        
+
+        
+        let startBtn = document.querySelector('#start');
+        let stopBtn = document.querySelector('#stop');
+
+        let randomNum = () => {
+            return Math.floor(Math.random() * 255 + 1);
+        }
+        
+        let changeBg = () => {            
+            document.body.style.backgroundColor = `rgba(${randomNum()},${randomNum()},${randomNum()},${Math.random().toFixed(1)})`;          
+        }
+
+        let setInver;
+    
+
+        startBtn.addEventListener('click',()=>{
+            setInver =  setInterval(changeBg,1000);
+            console.log('startBtn');
+        },false)
+
+        stopBtn.addEventListener('click', ()=>{
+            clearInterval(setInver);
+            console.log('stopBtn');
+        },false)
+        
+
+        
+
+    </script>
+</body>
+</html>
