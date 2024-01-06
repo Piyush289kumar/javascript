@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax API</title>
+</head>
+<body style="background: #212121; color:#fff;">
+
+    <h1>API Request</h1>
+    <img src="" alt="" id="avatar">
+    <p id="userName">Name:</p>
+    <p id="userFollower">Follower:</p>
+
+    <script>
+        const userAvatar = document.querySelector('#avatar');
+        const userName = document.querySelector('#userName');
+        const userFollower = document.querySelector('#userFollower');
+
+        const requestUrl = "https://api.github.com/users/Piyush289kumar";
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState === 4) {
+                const myData = JSON.parse(this.responseText)
+                userAvatar.setAttribute("src", myData.avatar_url);
+                userName.innerHTML = myData.name;
+                userFollower.innerHTML = myData.followers;
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
