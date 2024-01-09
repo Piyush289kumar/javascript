@@ -1,4 +1,4 @@
-/* write a JavaScript program to check whether a given integer is within 20 of 100 or 400. 
+/* Question 16: Write a JavaScript program to check whether a given integer is within 20 of 100 or 400. 
 Solution: */
 
 function testHundred(anyInput) {
