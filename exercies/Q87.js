@@ -17,4 +17,5 @@ const kGreatestElement = (arrayAsParams, kthEle = 1) => {
 const myArr = [1, 2, 6, 4, 5];
 
 console.log(kGreatestElement(myArr, 3));
+
 console.log(kGreatestElement([-10, -25, -47, -36, 0], 1));
